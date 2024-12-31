@@ -1,0 +1,1 @@
+{"root":["./src/helper.ts","./src/index.ts","./src/cmds/backend.ts","./src/cmds/fontend.ts","./src/cmds/help.ts","./src/cmds/version.ts"],"version":"5.7.2"}

@@ -11,3 +11,8 @@ Tiny Script which aim to make project setup easier
 - File Organizer
 - node_modules cleaner (urgent need of this)
 - tree command (cause i don't have one in debian)
+
+
+## This Project are to Sharpen my TS/JS Skills
+
+This REPO is a PERFECT example hpw to build a CLI tool in js/ts [REPO-LINK](https://github.com/vadimdemedes/create-ink-app.git)
