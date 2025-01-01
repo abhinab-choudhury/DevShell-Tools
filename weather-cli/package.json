@@ -1,0 +1,20 @@
+{
+  "name": "weather-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc -b && node --env-file=.env build/index.js",
+    "build": "tsc -b",
+    "format": "prettier . --write"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.3",
+    "prettier": "3.4.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}
