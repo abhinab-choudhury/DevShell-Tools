@@ -1,0 +1,26 @@
+{
+  "name": "react-tailwind-initializer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "tsc -b && node build/index.js",
+    "build": "tsc -b",
+    "format": "prettier . --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ansi-colors": "^4.1.3",
+    "inquirer": "^12.3.0",
+    "inquirer-search-list": "^1.2.6",
+    "ora": "^8.1.1",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  }
+}
