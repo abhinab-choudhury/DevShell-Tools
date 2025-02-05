@@ -1,9 +1,9 @@
 {
-  "name": "gitignore",
+  "name": "gen-git",
   "version": "1.0.0",
   "main": "dist/index.js",
   "bin": {
-    "gitignore": "./dist/index.js"
+    "gen-git": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc -b",
