@@ -1,15 +1,26 @@
 {
-  "name": "gitignore-initializer",
+  "name": "gitignore",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -b"
+  "main": "dist/index.js",
+  "bin": {
+    "gitignore": "./dist/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "npm run build && node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cli", "gitignore", "developer-tools"],
+  "author": "Abhinab Choudhury",
   "license": "ISC",
-  "description": "",
+  "description": "A CLI tool for generating .gitignore files",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhinab-choudhury/DevShell-Tools"
+  },
+  "bugs": {
+    "url": "https://github.com/abhinab-choudhury/DevShell-Tools/issues"
+  },
   "dependencies": {
     "inquirer": "^12.2.0",
     "inquirer-search-list": "^1.2.6",

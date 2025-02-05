@@ -1,4 +1,7 @@
+#!/usr/bin/env node
+
 import inquirer from "inquirer";
+import "inquirer-search-list";
 import * as fs from "fs";
 import { languages } from "./helper";
 
