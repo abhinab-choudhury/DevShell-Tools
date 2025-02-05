@@ -55,8 +55,3 @@ This project is licensed under the MIT License.
 
 - [Toptal GitIgnore API](https://www.toptal.com/developers/gitignore) for providing `.gitignore` templates.
 - The open-source community for inspiration and contributions.
-
----
-
-Feel free to modify this README to match your exact requirements! 🚀
-
