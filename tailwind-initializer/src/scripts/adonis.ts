@@ -25,21 +25,25 @@ function updateHomePage(project_name: string) {
         </div>
     </body>
   </html>
-  `
+  `;
 
-  const dirPath = path.join(rootDir, project_name, 'resources', 'views', 'pages');
+  const dirPath = path.join(
+    rootDir,
+    project_name,
+    'resources',
+    'views',
+    'pages'
+  );
   const filePath = path.join(dirPath, 'home.edge');
 
-  if(fs.existsSync(dirPath)) {
+  if (fs.existsSync(dirPath)) {
     console.log('Writing into ./resources/views/pages/home.edge..');
     fs.writeFileSync(filePath, content);
     console.log('home.edge written successfully.\n');
-
   } else {
     console.log(`${dirPath} not found`);
     process.exit(1);
   }
-
 }
 
 function writeCSS(project_name: string) {
@@ -62,9 +66,9 @@ function writeCSS(project_name: string) {
   const dirPath = path.join(rootDir, project_name, 'resources', 'css');
   const filePath = path.join(dirPath, 'app.css');
 
-  if(fs.existsSync(dirPath)) {
+  if (fs.existsSync(dirPath)) {
     console.log('Writing into ./resources/css/app.css...');
-    fs.writeFileSync(filePath, css)
+    fs.writeFileSync(filePath, css);
     console.log('app.css written successfully.\n');
 
     updateHomePage(project_name);
@@ -88,12 +92,12 @@ function writeTailwindConfig(project_name: string) {
     plugins: [],
   }
   `;
-  
+
   const dirPath = path.join(rootDir, project_name);
   const filePath = path.join(dirPath, 'tailwind.config.js');
 
-  console.log('\n\nDirPath: ', dirPath, "\nFilePath: ", filePath);
-  if(fs.existsSync(dirPath)) {
+  console.log('\n\nDirPath: ', dirPath, '\nFilePath: ', filePath);
+  if (fs.existsSync(dirPath)) {
     console.log('Writing into tailwind.config.js...');
     fs.writeFileSync(filePath, tailwind_config);
     console.log('tailwind.config.js written successfully.\n');
@@ -241,7 +245,6 @@ async function installTailwind(package_manager: string, project_name: string) {
     });
 
     writeTailwindConfig(project_name);
-
   } catch (error) {
     console.error(`Error during Tailwind installation: ${error}`);
     process.exit(1);
@@ -254,5 +257,6 @@ export default async function adonisInit(response: ResponseInterface) {
     await installTailwind(response.package_manager, response.project_name);
   } catch (error) {
     console.error('Failed to create Adonis Project\n', error);
+    process.exit(1);
   }
 }

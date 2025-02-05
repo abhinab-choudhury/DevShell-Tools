@@ -62,7 +62,8 @@ export async function setupClient(user_requirements:IUser) {
     try {
         // initialise a spinner
         const spinner = ora("Starting the process...").start();
-    
+        spinner.render();
+        
         // makeing the root folder
         user_requirements.project_name !== "." ? shell.mkdir(user_requirements.project_name) : shell.mkdir();
     

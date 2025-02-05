@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -46,6 +47,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const inquirer_1 = __importDefault(require("inquirer"));
+require("inquirer-search-list");
 const fs = __importStar(require("fs"));
 const helper_1 = require("./helper");
 inquirer_1.default.registerPrompt("search-list", require("inquirer-search-list"));
