@@ -1,0 +1,41 @@
+#hero_section {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.roboto-bold {
+  font-family: "Roboto", serif;
+  font-weight: bolder;
+}
+
+.inline-code {
+  background: rgba(128, 128, 128, 0.137);
+  padding: 5px 8px;
+  border-radius: 10px;
+  font-weight: lighter;
+}
+
+.code-block {
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.code-block:hover {
+  background-color: #0000000c;
+}
+
+.copied_alert {
+  font-family: "Roboto", serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 5px 0;
+  color: #000000;
+  margin-top: 10px;
+}

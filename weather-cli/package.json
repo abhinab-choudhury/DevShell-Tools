@@ -1,5 +1,8 @@
 {
-  "name": "weather-cli",
+  "name": "what_is_weather",
+  "bin": {
+    "what_is_weather": "./build/index.js"
+  },
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",

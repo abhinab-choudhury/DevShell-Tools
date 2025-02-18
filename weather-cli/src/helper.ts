@@ -18,7 +18,7 @@ export async function getPublicIP(): Promise<string> {
 
 export async function getLocationInfo(ip: string): Promise<GeoLocationData> {
   try {
-    const response = await fetch(`https://ipinfo.io/${ip}/json?token=${process.env.IPINFO_IO_TOKEN}`);
+    const response = await fetch(`https://ipinfo.io/${ip}/json?token=478d4011ee5104`);
 
     if (!response.ok) {
         throw new Error(`API request failed with status ${response.status}`);

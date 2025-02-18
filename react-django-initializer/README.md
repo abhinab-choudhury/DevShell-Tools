@@ -1,0 +1,2 @@
+# React + DJango Project Initializer
+
