@@ -1,0 +1,48 @@
+{
+  "name": "mern-init",
+  "version": "1.0.0",
+  "description": "A powerful CLI tool to quickly scaffold a modern MERN stack application with customizable setups including Tailwind CSS, ShadCN, Bootstrap, TypeScript, Vite, or Webpack.",
+  "main": "index.js",
+  "type": "module",
+  "packageManager": "yarn@4.6.0",
+  "bin": {
+    "mern-init": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "",
+    "bulid": "",
+    "start": "",
+    "format": ""
+  },
+  "keywords": [
+    "mern",
+    "mern stack",
+    "mern starter",
+    "mern project setup",
+    "mern boilerplate",
+    "react",
+    "react cli",
+    "node",
+    "mongodb",
+    "express",
+    "vite",
+    "tailwind",
+    "bootstrap",
+    "shadcn",
+    "fullstack development",
+    "full-stack javascript",
+    "typescript",
+    "create react app",
+    "create mern app",
+    "generate mern app",
+    "mern cli tool",
+    "mern stack generator",
+    "cli generator",
+    "project generator"
+  ],
+  "author": "Abhinab Choudhury",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^14.0.0"
+  }
+}

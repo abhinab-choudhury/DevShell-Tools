@@ -1,0 +1,48 @@
+{
+  "name": "generate-licence",
+  "packageManager": "yarn@4.6.0",
+  "main": "./dist/index.js",
+  "bin": "./dist/index.js",
+  "scripts": {
+    "start": "vite-node src/index.ts",
+    "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",
+    "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
+    "format": "prettier -w \"**/*.{ts,js,md,css}\" --ignore-path .gitignore",
+    "postbuild": "rimraf tsconfig.types.tsbuildinfo"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "commander": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "vite-node": "^3.2.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "keywords": [
+    "cli",
+    "licence",
+    "license",
+    "file generator",
+    "npx generate-licence",
+    "developer-tools"
+  ],
+  "author": "Abhinab Choudhury",
+  "license": "ISC",
+  "description": "A CLI tool for generating LICENSE file",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhinab-choudhury/DevShell-Tools"
+  },
+  "bugs": {
+    "url": "https://github.com/abhinab-choudhury/DevShell-Tools/issues"
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts"
+  ]
+}

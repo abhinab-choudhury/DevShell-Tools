@@ -1,0 +1,34 @@
+{
+  "name": "gen-git",
+  "version": "1.0.1",
+  "main": "./dist/index.js",
+  "bin": "./dist/index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "npm run build && node ./dist/index.js"
+  },
+  "keywords": [
+    "cli",
+    "gitignore",
+    "developer-tools"
+  ],
+  "author": "Abhinab Choudhury",
+  "license": "ISC",
+  "description": "A CLI tool for generating .gitignore files",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhinab-choudhury/DevShell-Tools"
+  },
+  "bugs": {
+    "url": "https://github.com/abhinab-choudhury/DevShell-Tools/issues"
+  },
+  "dependencies": {
+    "inquirer": "^12.2.0",
+    "inquirer-search-list": "^1.2.6",
+    "typescript": "^5.7.2"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7"
+  },
+  "packageManager": "yarn@4.6.0"
+}

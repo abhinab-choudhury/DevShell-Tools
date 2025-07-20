@@ -1,0 +1,46 @@
+{
+  "name": "generate-coc",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "vite-node src/index.ts",
+    "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",
+    "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
+    "format": "prettier -w \"**/*.{ts,js,md,css}\" --ignore-path .gitignore",
+    "postbuild": "rimraf tsconfig.types.tsbuildinfo"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "vite-node": "^3.2.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "commander": "^14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhinab-choudhury/DevShell-Tools"
+  },
+  "bugs": {
+    "url": "https://github.com/abhinab-choudhury/DevShell-Tools/issues"
+  },
+  "keywords": [
+    "CLI Tool",
+    "Code of Conduct",
+    "Markdown",
+    "Text",
+    "ASCII"
+  ],
+  "author": "Abhinab Choudhury",
+  "license": "MIT",
+  "description": "A CLI tool for generating Code of Conduct File for Opensource Projects.",
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts"
+  ]
+}
