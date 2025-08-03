@@ -1,6 +1,5 @@
 {
-  "name": "generate-licence",
-  "packageManager": "yarn@4.6.0",
+  "name": "generate-license",
   "main": "./dist/index.js",
   "bin": "./dist/index.js",
   "scripts": {

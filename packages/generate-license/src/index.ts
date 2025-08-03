@@ -2,6 +2,7 @@
 
 import { Command } from "commander";
 import { generateLicense } from "./actions";
+import path from "node:path";
 
 const program = new Command();
 
@@ -22,6 +23,11 @@ program
     "Overwrite the LICENSE file if it already exists.",
     false,
   )
-  .action(generateLicense);
+  .action((args, options) => {
+    const abs_path = path.join(__dirname, args, "LICENSE.md");
+    const { name, force } = options;
+
+    generateLicense(abs_path, name, force);
+  });
 
 program.parse();
