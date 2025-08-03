@@ -1,17 +1,28 @@
-export function generateCoc() {
-  console.log("Hello!!!");
-}
+export const urls = {
+  english:
+    "https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct",
+  bengali:
+    "https://www.contributor-covenant.org/bn/version/2/1/code_of_conduct/code_of_conduct",
+};
 
-/**
- * APIs
- * https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.adoc
- * https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md
- * https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.txt
- *
- * Languages Select API
- * English: https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.adoc
- * Deutsch: https://www.contributor-covenant.org/de/version/2/1/code_of_conduct/code_of_conduct.adoc
- * Bengali: https://www.contributor-covenant.org/bn/version/2/1/code_of_conduct/code_of_conduct.adoc
- * .... and many more
- *
- */
+export async function getFileContent(
+  language: string,
+  format: string,
+): Promise<string> {
+  let data;
+  switch (language) {
+    case "english": {
+      data = await fetch(`${urls["english"]}.${format}`);
+      break;
+    }
+    case "bengali": {
+      data = await fetch(`${urls["bengali"]}.${format}`);
+      break;
+    }
+    default: {
+      throw Error("Language not supported");
+    }
+  }
+
+  return await data.text();
+}
