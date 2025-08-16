@@ -1,7 +1,10 @@
 {
-  "name": "generate-coc",
-  "module": "index.ts",
+  "name": "gen-coc",
+  "version": "1.0.3",
   "type": "module",
+  "bin": {
+    "gen-coc": "./dist/index.js"
+  },
   "scripts": {
     "start": "vite-node src/index.ts",
     "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",

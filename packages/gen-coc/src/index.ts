@@ -1,20 +1,21 @@
 #!/usr/bin/env node
 
+import pjson from "../package.json";
 import { Command } from "commander";
 import path from "node:path";
 import fs from "node:fs";
 import * as p from "@clack/prompts";
 import { getFileContent } from "./actions.js";
-import { fileURLToPath } from "node:url";
+
 
 const program = new Command();
 
 program
-  .name("generate-coc")
+  .name("gen-coc")
   .description(
     "A CLI tool to quickly generate a Code of Conduct for your open-source projects.",
   )
-  .version("0.1.0");
+  .version(pjson.version);
 
 program
   .description("Generates a new CODE_OF_CONDUCT file.")
@@ -55,7 +56,10 @@ program
       lang = userInputs.lang;
     }
     try {
-      const filePath = path.join(__dirname, dir, `CODE_OF_CONDUCT.${ext}`);
+      const targetDir = path.resolve(process.cwd(), dir);
+      fs.mkdirSync(targetDir, { recursive: true });
+
+      const filePath = path.join(targetDir, `CODE_OF_CONDUCT.${ext}`);
       const s = p.spinner();
       s.start("Fetching Code of Conduct...");
 
