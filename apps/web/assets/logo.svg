@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Devshell Tool Logo</title>
+  <desc id="desc">Professional monochrome terminal window logo with chevron prompt and cursor.</desc>
+
+  <!-- Terminal window -->
+  <rect x="40" y="64" width="432" height="384" rx="28" ry="28"
+        fill="white" stroke="currentColor" stroke-width="20" />
+
+  <!-- Control dots (like macOS) -->
+  <circle cx="76" cy="100" r="10" fill="currentColor"/>
+  <circle cx="112" cy="100" r="10" fill="currentColor"/>
+  <circle cx="148" cy="100" r="10" fill="currentColor"/>
+
+  <g>
+      <!-- Prompt chevron ">" -->
+      <path d="M120 256 L200 216 L200 296 Z"
+            fill="none" stroke="currentColor" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" />
+
+      <!-- Command line -->
+      <line x1="238" y1="256" x2="340" y2="256"
+            stroke="currentColor" stroke-width="22" stroke-linecap="round" />
+
+      <!-- Cursor block -->
+      <rect x="364" y="236" width="36" height="40" rx="4" fill="currentColor" />
+  </g>
+</svg>

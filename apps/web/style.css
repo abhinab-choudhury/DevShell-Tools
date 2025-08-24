@@ -1,0 +1,36 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+.navbar,
+.card,
+.list-group-item,
+.form-control,
+.form-select {
+  background: #fff !important;
+  color: #000 !important;
+  border-color: #000 !important;
+}
+
+.muted {
+  color: #333;
+}
+
+code,
+pre {
+  color: #000;
+  background: #f8f8f8;
+  border: 1px solid #0001;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.hr-thin {
+  border-top: 1px solid #0002;
+  opacity: 1;
+}
