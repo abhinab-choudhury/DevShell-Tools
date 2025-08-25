@@ -39,12 +39,6 @@ You can generate a Code of Conduct file with a single command.
 # Generate a CODE_OF_CONDUCT.md in the current directory
 gen-coc
 
-# Generate a file in a specific directory with a different format
-gen-coc ./docs txt
-
-# Specify language explicitly
-gen-coc ./ adoc bengali
-
 # Overwrite an existing file
 gen-coc --force
 
@@ -56,10 +50,10 @@ gen-coc --interactive
 
 ### Supported Formats & Languages
 
-| Category  | Supported Values    |
-| --------- | ------------------- |
-| Formats   | `md`, `txt`, `adoc` |
-| Languages | `english`, `bengali`|
+| Category  | Supported Values     |
+| --------- | -------------------- |
+| Formats   | `md`, `txt`, `adoc`  |
+| Languages | `english`, `bengali` |
 
 ---
 
