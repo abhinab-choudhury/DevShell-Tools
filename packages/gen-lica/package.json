@@ -1,8 +1,11 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.5",
   "name": "gen-lica",
-  "main": "./dist/index.js",
-  "bin": "./dist/index.js",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "gen-lica": "dist/index.js"
+  },
   "scripts": {
     "start": "vite-node src/index.ts",
     "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",
@@ -29,7 +32,7 @@
     "licence",
     "license",
     "file generator",
-    "npx gen-lic",
+    "npx gen-lica",
     "developer-tools"
   ],
   "author": "Abhinab Choudhury",

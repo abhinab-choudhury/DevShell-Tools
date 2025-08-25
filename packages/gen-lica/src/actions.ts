@@ -1,8 +1,7 @@
 import chalk from "chalk";
-import { match } from "node:assert";
 import fs from "node:fs";
 import path from "node:path";
-import { licenseNames, licenses } from ".";
+import { licenseNames, licenses } from "./utils";
 import { License } from "./types";
 
 async function getGithubDetails(username: string): Promise<any> {
