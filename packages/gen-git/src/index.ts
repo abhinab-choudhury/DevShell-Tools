@@ -3,22 +3,25 @@
 import inquirer from "inquirer";
 import "inquirer-search-list";
 import * as fs from "fs";
-import { languages } from "./helper";
+import { getLanguages } from "./helper";
+import chalk from "chalk";
+
 
 inquirer.registerPrompt("search-list", require("inquirer-search-list"));
 
 (async function () {
-  // @ts-ignore
-  const { language } = await inquirer.prompt([
+  const languages = await getLanguages();
+
+  const { language } = await (inquirer.prompt as any)([
     {
-      type: "search-list",
+      type: "search-list" as const,
       name: "language",
       message: "Choose Language: ",
-      choices: languages.map((lang) => ({ name: lang, value: lang })),
+      choices: languages,
     },
   ]);
 
-  console.log("Fetching gitignore for", language, "......");
+  console.log(chalk.red(`Fetching gitignore for, ${language} ......`));
 
   try {
     const gitignore_lang = await fetch(
@@ -46,11 +49,13 @@ inquirer.registerPrompt("search-list", require("inquirer-search-list"));
         });
     } else {
       fs.writeFile(".gitignore", response, (err) => {
-        if (err) throw err;
+        if (err) {
+          throw new Error(chalk.red((err as Error).message));
+        }
         console.log("The file has been saved!");
       });
     }
-  } catch (error) {
-    console.error("Error fetching gitignore:", error);
+  } catch (err) {
+    console.error(chalk.red(`Error fetching gitignore:, ${(err as Error).message}`));
   }
 })();

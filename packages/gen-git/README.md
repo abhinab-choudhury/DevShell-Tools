@@ -1,4 +1,4 @@
-# gen-git - GitIgnore Generator
+# gen-git
 
 gen-git is a CLI tool that allows developers to generate `.gitignore` files for different programming languages and frameworks with ease. It integrates with Toptal's GitIgnore API to fetch optimized `.gitignore` files and provides an interactive experience for users.
 

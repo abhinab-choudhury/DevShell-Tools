@@ -1,11 +1,17 @@
 {
   "name": "gen-git",
-  "version": "1.0.1",
-  "main": "./dist/index.js",
-  "bin": "./dist/index.js",
+  "version": "1.1.3",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "gen-git": "dist/index.js"
+  },
   "scripts": {
-    "build": "tsc -b",
-    "start": "npm run build && node ./dist/index.js"
+    "start": "vite-node src/index.ts",
+    "build": "bun build --target=node ./src/index.ts --outfile=dist/index.js && bun run build:declaration",
+    "build:declaration": "tsc --emitDeclarationOnly --project tsconfig.types.json",
+    "format": "prettier -w \"**/*.{ts,js,md,css}\" --ignore-path .gitignore",
+    "postbuild": "rimraf tsconfig.types.tsbuildinfo"
   },
   "keywords": [
     "cli",
@@ -23,9 +29,13 @@
     "url": "https://github.com/abhinab-choudhury/DevShell-Tools/issues"
   },
   "dependencies": {
+    "chalk": "^5.6.0",
     "inquirer": "^12.2.0",
     "inquirer-search-list": "^1.2.6",
-    "typescript": "^5.7.2"
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.2",
+    "vite-node": "^3.2.4"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.7"
