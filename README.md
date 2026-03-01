@@ -8,26 +8,14 @@ Simple Tools which aim to make devs lifes easier.
 npx gen-git
 ```
 
-## weather-cli
-
-```sh
-npx what_is_weather
-```
-
-## mern-initializer
-
-```sh
-npx mern_init
-```
-
 ## generate-coc
 
 ```sh
-npx generate-coc
+npx gen-coc
 ```
 
 ## generate-license
 
 ```sh
-npx generate-license
+npx gen-lica
 ```
